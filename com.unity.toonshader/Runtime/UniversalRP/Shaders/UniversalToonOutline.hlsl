@@ -10,6 +10,8 @@
                 float3 normal : NORMAL;
                 float4 tangent : TANGENT;
                 float2 texcoord0 : TEXCOORD0;
+
+                UNITY_VERTEX_INPUT_INSTANCE_ID
             };
             struct VertexOutput {
                 float4 pos : SV_POSITION;
@@ -17,9 +19,15 @@
                 float3 normalDir : TEXCOORD1;
                 float3 tangentDir : TEXCOORD2;
                 float3 bitangentDir : TEXCOORD3;
+
+                UNITY_VERTEX_OUTPUT_STEREO
             };
             VertexOutput vert (VertexInput v) {
                 VertexOutput o = (VertexOutput)0;
+
+                UNITY_SETUP_INSTANCE_ID(v);
+                UNITY_INITIALIZE_VERTEX_OUTPUT_STEREO(o);
+
                 o.uv0 = v.texcoord0;
                 float4 objPos = mul ( unity_ObjectToWorld, float4(0,0,0,1) );
                 float2 Set_UV0 = o.uv0;
@@ -77,7 +85,7 @@
                 float3 Set_BaseColor = _BaseColor.rgb*_MainTex_var.rgb;
                 float3 _Is_BlendBaseColor_var = lerp( _Outline_Color.rgb*lightColor, (_Outline_Color.rgb*Set_BaseColor*Set_BaseColor*lightColor), _Is_BlendBaseColor );
                 //
-                float3 _OutlineTex_var = tex2D(_OutlineTex,TRANSFORM_TEX(Set_UV0, _OutlineTex));
+                float3 _OutlineTex_var = tex2D(_OutlineTex,TRANSFORM_TEX(Set_UV0, _OutlineTex)).rgb;
 //v.2.0.7.5
 #ifdef _IS_OUTLINE_CLIPPING_NO
                 float3 Set_Outline_Color = lerp(_Is_BlendBaseColor_var, _OutlineTex_var.rgb*_Outline_Color.rgb*lightColor, _Is_OutlineTex );

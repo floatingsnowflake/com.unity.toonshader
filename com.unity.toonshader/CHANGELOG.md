@@ -1,7 +1,18 @@
 # Changelog
-## [0.4.0-preview] - 2021-09-29
+## [0.4.1-preview] - 2021-10-27
+### Fixed:
+* typo in documants.
+## [0.4.0-preview] - 2021-10-13
 ### Added
-* HDRP: Compatible with Box Light, a spot light varietion, as main lights.
+* HDRP: Compatibility with Box Light, a spot light varietion, as main lights.
+* HDRP: BoxLightAdjustment mono-behavior
+### Fixed:
+* URP: Unstable SRP Compatiblity. Thanks to tangx246.
+* URP: Outline pass is not compatible with VR when  Single Pass Instanced rendering is chosen. Thanks to tangx246 again.
+* URP: Some warnings.
+### Updated:
+* Documentation~/en/FeatureModel_en.md. Thanks to riina.
+* Platforms in documentation.
 
 ## [0.3.2-preview] - 2021-09-28
 ### Added
