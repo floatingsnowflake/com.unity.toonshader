@@ -1,5 +1,23 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-6513862926046392273
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd54056a23d0e6e42ac3033150305e31, type: 3}
+  m_Name: '15af4f3a-a241-4f6f-b280-979797e1c89e: SelectionGroupNode.output -> SelectionGroupUnionNode.groupB'
+  m_EditorClassIdentifier: 
+  input: {fileID: -1324826675992587931}
+  output: {fileID: -4510836818760051944}
+  inputFieldName: groupB
+  outputFieldName: output
+  guid: 15af4f3a-a241-4f6f-b280-979797e1c89e
+  useProperty: 0
 --- !u!114 &-6201517351742306253
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -36,6 +54,73 @@ MonoBehaviour:
     m_exportRenderTexture:
       overrideState: 1
       value: {fileID: 0}
+--- !u!114 &-4702095332519796051
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd54056a23d0e6e42ac3033150305e31, type: 3}
+  m_Name: '0c40342c-8892-479c-913b-cce77772ebe1: SelectionGroupUnionNode.output ->
+    RenderingNode.objects'
+  m_EditorClassIdentifier: 
+  input: {fileID: -1231764225901278633}
+  output: {fileID: -1324826675992587931}
+  inputFieldName: objects
+  outputFieldName: output
+  guid: 0c40342c-8892-479c-913b-cce77772ebe1
+  useProperty: 0
+--- !u!114 &-4510836818760051944
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d734242960cc7c54d99e327ba532d9ae, type: 3}
+  m_Name: SelectionGroupNode
+  m_EditorClassIdentifier: 
+  guid: 259cacc4-2ebb-43eb-aa27-bac9d07e1cbc
+  groupGuid: 
+  position: {x: -877.7143, y: 177.14287}
+  renderEnabled: 1
+  title: SelectionGroupNode
+  isPinned: 0
+  pinnedPosition: {x: 0, y: 0}
+  portedFieldsContainer: []
+  group:
+    exposedName: 
+    defaultValue: {fileID: 0}
+  m_groupReferenceList:
+    m_groupReferences:
+    - m_exposedRef:
+        exposedName: 642c87fc7b5e88a4b9c52bc72ad5ce29
+        defaultValue: {fileID: 0}
+--- !u!114 &-1324826675992587931
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 494d551868207cd4ea946853a5e1a4b9, type: 3}
+  m_Name: SelectionGroupUnionNode
+  m_EditorClassIdentifier: 
+  guid: d1033e7f-1a28-4fad-abaa-a4174bab14e7
+  groupGuid: 
+  position: {x: 65.71429, y: -236.57143}
+  renderEnabled: 1
+  title: SelectionGroupUnionNode
+  isPinned: 0
+  pinnedPosition: {x: 0, y: 0}
+  portedFieldsContainer: []
 --- !u!114 &-1231764225901278633
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -50,7 +135,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   guid: b4cb03a4-79e8-4bfb-bb2c-5bfa387f72df
   groupGuid: 
-  position: {x: 0, y: 0}
+  position: {x: 714.8571, y: -466.2857}
   renderEnabled: 1
   title: RenderingNode
   isPinned: 0
@@ -85,7 +170,7 @@ MonoBehaviour:
   backgroundColor:
     overrideState: 0
     value: {r: 0, g: 0, b: 0, a: 1}
---- !u!114 &-142876338889444138
+--- !u!114 &-545192623987148941
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -94,15 +179,25 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dd54056a23d0e6e42ac3033150305e31, type: 3}
-  m_Name: '2f7ee5de-51d7-49ba-bacc-e481ad3280af: RenderingNode.output -> LayerNode.input'
+  m_Script: {fileID: 11500000, guid: d734242960cc7c54d99e327ba532d9ae, type: 3}
+  m_Name: SelectionGroupNode
   m_EditorClassIdentifier: 
-  input: {fileID: -6201517351742306253}
-  output: {fileID: -1231764225901278633}
-  inputFieldName: input
-  outputFieldName: output
-  guid: 2f7ee5de-51d7-49ba-bacc-e481ad3280af
-  useProperty: 0
+  guid: 4c5bae9a-e799-4528-bce1-6c039872c13c
+  groupGuid: 
+  position: {x: 82.17828, y: 547.6637}
+  renderEnabled: 1
+  title: SelectionGroupNode
+  isPinned: 0
+  pinnedPosition: {x: 0, y: 0}
+  portedFieldsContainer: []
+  group:
+    exposedName: 
+    defaultValue: {fileID: 0}
+  m_groupReferenceList:
+    m_groupReferences:
+    - m_exposedRef:
+        exposedName: 6786c1cf8c724db45942284a982fddbe
+        defaultValue: {fileID: 0}
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -117,11 +212,101 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodes:
   - {fileID: -1231764225901278633}
+  - {fileID: 7824192794318612158}
+  - {fileID: -4510836818760051944}
+  - {fileID: -1324826675992587931}
+  - {fileID: -545192623987148941}
   edges:
-  - {fileID: -142876338889444138}
+  - {fileID: 868237814379142166}
+  - {fileID: -6513862926046392273}
+  - {fileID: -4702095332519796051}
+  - {fileID: 765188964089201562}
+  - {fileID: 1311903242960878564}
   layers:
   - {fileID: -6201517351742306253}
   groups: []
-  layerStackPosition: {x: 576, y: 0}
+  layerStackPosition: {x: 1175.4286, y: -243.42857}
   m_isInitialized: 1
   _compositorGraphVersion: 1
+--- !u!114 &765188964089201562
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd54056a23d0e6e42ac3033150305e31, type: 3}
+  m_Name: '14068ef8-51d4-4b0d-97b9-ae3df654a4c1: SelectionGroupNode.output -> RenderingNode.lights'
+  m_EditorClassIdentifier: 
+  input: {fileID: -1231764225901278633}
+  output: {fileID: -545192623987148941}
+  inputFieldName: lights
+  outputFieldName: output
+  guid: 14068ef8-51d4-4b0d-97b9-ae3df654a4c1
+  useProperty: 0
+--- !u!114 &868237814379142166
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd54056a23d0e6e42ac3033150305e31, type: 3}
+  m_Name: '30d09e00-d1e4-46b0-ae95-a16410449a04: SelectionGroupNode.output -> SelectionGroupUnionNode.groupA'
+  m_EditorClassIdentifier: 
+  input: {fileID: -1324826675992587931}
+  output: {fileID: 7824192794318612158}
+  inputFieldName: groupA
+  outputFieldName: output
+  guid: 30d09e00-d1e4-46b0-ae95-a16410449a04
+  useProperty: 0
+--- !u!114 &1311903242960878564
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd54056a23d0e6e42ac3033150305e31, type: 3}
+  m_Name: '1ff8e458-0a7b-4cc2-8815-229294c52726: RenderingNode.output -> LayerNode.input'
+  m_EditorClassIdentifier: 
+  input: {fileID: -6201517351742306253}
+  output: {fileID: -1231764225901278633}
+  inputFieldName: input
+  outputFieldName: output
+  guid: 1ff8e458-0a7b-4cc2-8815-229294c52726
+  useProperty: 0
+--- !u!114 &7824192794318612158
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d734242960cc7c54d99e327ba532d9ae, type: 3}
+  m_Name: SelectionGroupNode
+  m_EditorClassIdentifier: 
+  guid: 936abe86-175b-497a-bc53-2e5a8de9c8da
+  groupGuid: 
+  position: {x: -849.7143, y: -134.28572}
+  renderEnabled: 1
+  title: SelectionGroupNode
+  isPinned: 0
+  pinnedPosition: {x: 0, y: 0}
+  portedFieldsContainer: []
+  group:
+    exposedName: 
+    defaultValue: {fileID: 0}
+  m_groupReferenceList:
+    m_groupReferences:
+    - m_exposedRef:
+        exposedName: 8662ed7cfc910784aadfbf2380e3cb84
+        defaultValue: {fileID: 0}

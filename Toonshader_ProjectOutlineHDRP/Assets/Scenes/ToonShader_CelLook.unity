@@ -557,6 +557,61 @@ MonoBehaviour:
   m_AreaLightEmissiveMeshShadowCastingMode: 0
   m_AreaLightEmissiveMeshMotionVectorGenerationMode: 0
   m_AreaLightEmissiveMeshLayer: -1
+--- !u!1 &170336232
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 170336234}
+  - component: {fileID: 170336233}
+  m_Layer: 0
+  m_Name: Light
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &170336233
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 170336232}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be40bfb66f1080540ad807eb78ccd866, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  color: {r: 0.18304683, g: 0.9946636, b: 0.012751237, a: 1}
+  query: 
+  _legacyMembers: []
+  members:
+  - {fileID: 1840857225}
+  - {fileID: 694067455}
+  sgVersion: 3
+  m_editorToolsStatus: 
+  m_editorToolsStates:
+    m_keys: 0000000001000000
+    m_values: 0000
+  m_showMembersInWindow: 1
+--- !u!4 &170336234
+Transform:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 170336232}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 15
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &181599645
 GameObject:
   m_ObjectHideFlags: 0
@@ -589,7 +644,13 @@ MonoBehaviour:
   color: {r: 0.08653275, g: 0.9644915, b: 0.55381155, a: 1}
   query: 
   _legacyMembers: []
-  members: []
+  members:
+  - {fileID: 474156928}
+  - {fileID: 474156927}
+  - {fileID: 474156926}
+  - {fileID: 474156925}
+  - {fileID: 474156924}
+  - {fileID: 474156923}
   sgVersion: 3
   m_editorToolsStatus: 
   m_editorToolsStates:
@@ -705,8 +766,14 @@ MonoBehaviour:
   _referenceMap:
     m_keys:
     - 33b11b6f955857f4db7318944858c196
+    - 8662ed7cfc910784aadfbf2380e3cb84
+    - 642c87fc7b5e88a4b9c52bc72ad5ce29
+    - 6786c1cf8c724db45942284a982fddbe
     m_values:
     - {fileID: 794565945}
+    - {fileID: 181599646}
+    - {fileID: 1191524098}
+    - {fileID: 170336233}
 --- !u!4 &372233704
 Transform:
   m_ObjectHideFlags: 1
@@ -1163,6 +1230,42 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 705cdfbbbed449efa36cdd1e2ab6ef97, type: 3}
+--- !u!1 &474156923 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1673285163430804, guid: 705cdfbbbed449efa36cdd1e2ab6ef97,
+    type: 3}
+  m_PrefabInstance: {fileID: 474156922}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &474156924 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1229443725375378, guid: 705cdfbbbed449efa36cdd1e2ab6ef97,
+    type: 3}
+  m_PrefabInstance: {fileID: 474156922}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &474156925 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1590974229819140, guid: 705cdfbbbed449efa36cdd1e2ab6ef97,
+    type: 3}
+  m_PrefabInstance: {fileID: 474156922}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &474156926 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1973451554856924, guid: 705cdfbbbed449efa36cdd1e2ab6ef97,
+    type: 3}
+  m_PrefabInstance: {fileID: 474156922}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &474156927 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1143962290918434, guid: 705cdfbbbed449efa36cdd1e2ab6ef97,
+    type: 3}
+  m_PrefabInstance: {fileID: 474156922}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &474156928 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1083778304470998, guid: 705cdfbbbed449efa36cdd1e2ab6ef97,
+    type: 3}
+  m_PrefabInstance: {fileID: 474156922}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &581377281 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4362015616125540, guid: 705cdfbbbed449efa36cdd1e2ab6ef97,
@@ -1418,6 +1521,7 @@ MonoBehaviour:
   m_sceneSelectionGroups:
   - {fileID: 1191524098}
   - {fileID: 181599646}
+  - {fileID: 170336233}
 --- !u!4 &779525948
 Transform:
   m_ObjectHideFlags: 1
@@ -2133,7 +2237,8 @@ MonoBehaviour:
   color: {r: 0.27286246, g: 0.069497794, b: 0.9335289, a: 1}
   query: 
   _legacyMembers: []
-  members: []
+  members:
+  - {fileID: 1076450055}
   sgVersion: 3
   m_editorToolsStatus: 
   m_editorToolsStates:
