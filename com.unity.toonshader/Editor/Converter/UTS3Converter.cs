@@ -83,9 +83,8 @@ namespace UnityEditor.Rendering.Toon
 
 
         public VisualTreeAsset converterEditorAsset;
-        public VisualTreeAsset converterItem;
-        public VisualTreeAsset converterWidgetMainAsset;
-        public VisualTreeAsset converterItemMaterial;
+
+
 
 
 
@@ -250,26 +249,7 @@ namespace UnityEditor.Rendering.Toon
         }
 
 
-        private bool SaveCurrentSceneAndContinue()
-        {
-#if false
-            Scene currentScene = SceneManager.GetActiveScene();
-            if (currentScene.isDirty)
-            {
-                if (EditorUtility.DisplayDialog("Scene is not saved.",
-                    "Current scene is not saved. Please save the scene before continuing.", "Save and Continue",
-                    "Cancel"))
-                {
-                    EditorSceneManager.SaveScene(currentScene);
-                }
-                else
-                {
-                    return false;
-                }
-            }
-#endif
-            return true;
-        }
+
 
         void ScanProject(ClickEvent evt)
         {
@@ -325,9 +305,7 @@ namespace UnityEditor.Rendering.Toon
 
             rootVisualElement.Q<VisualElement>("topInformationVE").style.display = DisplayStyle.None;
             rootVisualElement.Q<VisualElement>("singleConverterVE").style.display = DisplayStyle.Flex;
-            // rootVisualElement.Q<VisualElement>("singleConverterVE").Add(element);
-            //            element.Q<VisualElement>("converterItems").style.display = DisplayStyle.Flex;
-            //            element.Q<VisualElement>("informationVE").style.display = DisplayStyle.Flex;
+
 
             rootVisualElement.Q<Button>("backButton").RegisterCallback<ClickEvent>(BackToConverters);
         }
@@ -338,8 +316,7 @@ namespace UnityEditor.Rendering.Toon
             rootVisualElement.Q<VisualElement>("singleConverterVE").style.display = DisplayStyle.None;
             // rootVisualElement.Q<VisualElement>("singleConverterVE").Remove(element);
 
-            //element.Q<VisualElement>("converterItems").style.display = DisplayStyle.None;
-            //element.Q<VisualElement>("informationVE").style.display = DisplayStyle.None;
+
 
             RecreateUI();
 
