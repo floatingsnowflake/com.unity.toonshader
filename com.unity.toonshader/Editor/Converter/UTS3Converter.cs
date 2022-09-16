@@ -350,28 +350,6 @@ namespace UnityEditor.Rendering.Toon
             }
         }
 
-        internal static void DontSaveToLayout(EditorWindow wnd)
-        {
-#if true
-            return;
-#else
-            // Making sure that the window is not saved in layouts.
-            Assembly assembly = typeof(EditorWindow).Assembly;
-            var editorWindowType = typeof(EditorWindow);
-            var hostViewType = assembly.GetType("UnityEditor.HostView");
-            var containerWindowType = assembly.GetType("UnityEditor.ContainerWindow");
-            var parentViewField = editorWindowType.GetField("m_Parent", BindingFlags.Instance | BindingFlags.NonPublic);
-            var parentViewValue = parentViewField.GetValue(wnd);
-            // window should not be saved to layout
-            var containerWindowProperty =
-                hostViewType.GetProperty("window", BindingFlags.Instance | BindingFlags.Public);
-            var parentContainerWindowValue = containerWindowProperty.GetValue(parentViewValue);
-            var dontSaveToLayoutField =
-                containerWindowType.GetField("m_DontSaveToLayout", BindingFlags.Instance | BindingFlags.NonPublic);
-            dontSaveToLayoutField.SetValue(parentContainerWindowValue, true);
-#endif
-        }
-
 
         void Convert(ClickEvent evt)
         {
