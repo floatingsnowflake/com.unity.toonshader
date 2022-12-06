@@ -1,3 +1,4 @@
+#define OLD_UTS_2017
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -64,7 +65,7 @@ namespace UnityEditor.Rendering.Toon
                 {
                     continue;
                 }
-#if OLD_UTS
+#if OLD_UTS_2017
 #else
                 var targetLine2 = Array.Find<string>(lines, line => line.StartsWith("    - _utsVersion"));
                 if (targetLine2 == null)
@@ -294,7 +295,7 @@ namespace UnityEditor.Rendering.Toon
                 {
                     continue;      // Not Unity-chan Toon Shader Ver 2.
                 }
-#if OLD_UTS
+#if OLD_UTS_2017
 #else
                 var targetLine2 = Array.Find<string>(lines, line => line.StartsWith("    - _utsVersion"));
                 if (targetLine2 == null)
@@ -403,8 +404,13 @@ namespace UnityEditor.Rendering.Toon
                 var renderType = UTS2Info.m_renderType;
                 var renderQueueInShader = UTS2Info.m_renderQueue;
                 material.SetOverrideTag(UTS2INFO.RENDERTYPE, renderType);
+#if OLD_UTS_2017
+                UTS3GUI.UTS_Mode technique = UTS2Info.m_ShaderName.ToLower().Contains("shadinggrademap")
+                    ? UTS3GUI.UTS_Mode.ShadingGradeMap
+                    : UTS3GUI.UTS_Mode.ThreeColorToon;
+#else                
                 UTS3GUI.UTS_Mode technique = (UTS3GUI.UTS_Mode)UTS3GUI.MaterialGetInt(material, UTS3GUI.ShaderPropUtsTechniqe);
-
+#endif
                 switch (technique)
                 {
                     case UTS3GUI.UTS_Mode.ThreeColorToon:
@@ -436,7 +442,11 @@ namespace UnityEditor.Rendering.Toon
                 // Should be kept as it is.
                 // SetGameRecommendation(material);
                 var clippingMode = UTS2Info.clippingMode;
-                ApplyClippingMode(material, clippingMode);
+#if OLD_UTS_2017
+                ApplyClippingMode(material, clippingMode, technique == UTS3GUI.UTS_Mode.ShadingGradeMap );                
+#else                
+                ApplyClippingMode(material, clippingMode, IsShadingGrademap(material) );
+#endif
                 ApplyStencilMode(material, UTS2Info.m_stencilMode);
                 ApplyAngelRing(material);
                 ApplyMatCapMode(material);
@@ -636,10 +646,10 @@ namespace UnityEditor.Rendering.Toon
 
 
         }
-        void ApplyClippingMode(Material material,int clippingMode)
+        void ApplyClippingMode(Material material,int clippingMode, bool isShadingGrademap)
         {
 
-            if (!IsShadingGrademap(material))
+            if (!isShadingGrademap)
             {
 
 
