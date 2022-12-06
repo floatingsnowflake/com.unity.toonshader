@@ -64,7 +64,8 @@ namespace UnityEditor.Rendering.Toon
                 {
                     continue;
                 }
-
+#if OLD_UTS
+#else
                 var targetLine2 = Array.Find<string>(lines, line => line.StartsWith("    - _utsVersion"));
                 if (targetLine2 == null)
                 {
@@ -86,9 +87,10 @@ namespace UnityEditor.Rendering.Toon
                 float utsVersion = float.Parse(utsVersionString);
                 if (utsVersion < 2.07f)
                 {
-                    m_versionErrorCount++;
+                   m_versionErrorCount++;
                     continue;
                 }
+#endif                
                 m_ConvertingMaterialGuids.Add(guid);
 
                 if (!m_Material2GUID_Dictionary.ContainsKey(material))
@@ -292,6 +294,8 @@ namespace UnityEditor.Rendering.Toon
                 {
                     continue;      // Not Unity-chan Toon Shader Ver 2.
                 }
+#if OLD_UTS
+#else
                 var targetLine2 = Array.Find<string>(lines, line => line.StartsWith("    - _utsVersion"));
                 if (targetLine2 == null)
                 {
@@ -321,7 +325,7 @@ namespace UnityEditor.Rendering.Toon
                         AddMaterialToScrollview(material);
                     continue;
                 }
-
+#endif
             }
             return m_versionErrorCount;
         }
@@ -716,7 +720,7 @@ namespace UnityEditor.Rendering.Toon
             {//When AngelRing is available
                 material.SetFloat(UTS3GUI.ShaderPropIs_LightColor_AR, 1);
             }
-            if (material.HasProperty(UTS3GUI.ShaderPropOutline))//OUTLINEÇ™Ç†ÇÈèÍçá.
+            if (material.HasProperty(UTS3GUI.ShaderPropOutline))//OUTLINEÔøΩÔøΩÔøΩÔøΩÔøΩÔøΩÍçá.
             {
                 material.SetFloat(UTS3GUI.ShaderPropIs_LightColor_Outline, 1);
             }
